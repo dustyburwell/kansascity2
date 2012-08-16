@@ -1,0 +1,43 @@
+extends layout
+
+block body
+	h2 Add an event to kansascity2
+
+	form(name='addEvent', method='post', action='/add_event/')
+		h3 Your Information
+
+		label Your name
+			input(name='owner[name]')
+		label Your email
+			input(name='owner[email]')
+
+		h3 Your Event
+
+		label The event title
+			input(name='event[title]')
+		label When is the event?
+			select(name='event[frequency]')
+				option Monthly
+				option Bi-Monthly
+				option Weekly
+				option Irregular
+			select(name='event[phase]')
+				option First
+				option Second
+				option Third
+				option Fourth
+				option Last
+			select(name='event[day]')
+				option Sunday
+				option Monday
+				option Tuesday
+				option Wednesday
+				option Thursday
+				option Friday
+				option Saturday
+		label Who is the event for?
+			input(name='event[people]')
+		label The event's website
+			input(name='event[url]')
+
+		input(type='submit') Add Event

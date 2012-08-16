@@ -1,0 +1,23 @@
+{
+   "author": "Dusty Burwell",
+   "name": "kansascity2",
+   "version": "0.0.0",
+   "homepage": "http://kansascity2.com",
+   "repository": {
+      "type": "git",
+      "url": "git://github.com/dustyburwell/kansascity2.git"
+   },
+   "main": "index.js",
+   "dependencies": {
+      "express": "3",
+      "connect-assets": "2.2.1",
+      "jade": "0.26.1",
+      "coffee-script": "1.3.3",
+      "less": "1"
+   },
+   "devDependencies": {},
+   "optionalDependencies": {},
+   "engines": {
+      "node": "0.8.0"
+   }
+}

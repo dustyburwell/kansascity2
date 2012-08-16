@@ -1,0 +1,29 @@
+doctype 5
+html
+   head
+      link(rel="shortcut icon", href="/favicon.ico")
+
+      title kansascity2: what's on
+         block title
+            |?
+
+      block styles
+         != css("reset")
+         != css("core")
+         != css("event")
+         
+      block scripts
+         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+         != js("pages/add_event")
+
+   body(class=viewClass(locals))
+      header
+         h1 kansascity2: what's on
+
+         .add
+            nav
+               ul
+                  li.add_event
+                     a(href="/add_event/") Add your event
+
+      block body

@@ -1,0 +1,74 @@
+body.event {
+
+	.vertical(@startColor: #555, @endColor: #333) {
+		background-color: @endColor;
+		background-repeat: no-repeat;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+		background-image: -webkit-linear-gradient(@startColor, @endColor);
+		background-image: -moz-linear-gradient(@startColor, @endColor);
+		background-image: -o-linear-gradient(top,  @startColor,  @endColor);
+		background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+		filter: e(%("progid:DXImageTransform.Microsoft.Gradient(StartColorStr='%d', EndColorStr='%d', GradientType=0)",@startColor,@endColor));
+		-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorStr='%d', EndColorStr='%d', GradientType=0))",@startColor,@endColor);
+	}
+
+	label {
+		display: block;
+		margin-left: 10px;
+		margin-bottom: 5px;
+		color: #666;
+
+		input {
+			padding: 5px;
+			color: #666;
+			background: #f7f7f7;
+			border-left: 1px solid #666;
+			border-top: 1px solid #666;
+			border-bottom: 1px solid #CCC;
+			border-right: 1px solid #CCC;
+		}
+
+		input:focus {
+			.vertical(#f7f7f7, #DEEEFF);
+
+			-moz-box-shadow:    0px 0px 6px #F0F0F0;
+		   -webkit-box-shadow: 0px 0px 6px #F0F0F0;
+		   box-shadow:         0px 0px 6px #F0F0F0;
+
+		   border-color: #2990FF;
+		}
+
+		input, select {
+			display: block;
+			width: 300px;
+		}
+	}
+
+	input[type=submit] {
+	   background-color: #00131E;
+		background-image: -webkit-linear-gradient(top, #00527F, #001723);
+		border-bottom-color: #000305;
+		border-left-color: #00131E;
+		border-right-color: #00131E;
+		border-top-color: #00131E;
+		border-radius: 6px;
+		border-style: solid;
+		border-width: 1px;
+		box-shadow: rgba(255, 255, 255, 0.199219) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.046875) 0px 1px 2px 0px;
+		box-sizing: border-box;
+		color: white;
+		cursor: pointer;
+		display: block;
+		font-size: 16px;
+		margin-bottom: 22px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 15px;
+		padding-bottom: 9px;
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-top: 9px;
+		text-shadow: rgba(0, 0, 0, 0.328125) 0px -1px 0px;
+		width: 340px;
+	}
+}
