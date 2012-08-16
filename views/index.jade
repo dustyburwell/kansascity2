@@ -6,33 +6,17 @@ block heading
 
 block body
 	article
-		section.monthly
-			header 
-				h2 Monthly
-			ol.events
-				li.vcard 
-					h3
-						a Thing 1
-					p.who Humans
-					p.when Last Wednesday
-		section.weekly
-			header
-				h2 Weekly
-			ol.events
-				li.vcard 
-					h3
-						a Thing 2
-					p.who Pythonistas
-					p.when First Wednesday
-		section.irregular
-			header
-				h2 Irregular
-			ol.events
-				li.vcard 
-					h3
-						a Thing 3
-					p.who Rubyists
-					p.when First Tuesday
+		each val, key in events
+			section
+				header
+					h2= key
+				ol.events
+					each event in val
+						li.vcard
+							h3
+								a(href=event.url)= event.title
+								p.who= event.people
+								p.when= event.when
 
 	footer
 		| howdy howdy howdy

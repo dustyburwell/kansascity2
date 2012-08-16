@@ -20,18 +20,18 @@ app.use express.bodyParser()
 app.use require("connect-assets")()
 app.use express.static __dirname + "/../public"
 app.use (req, res, next) ->
-	res.locals.viewClass = (locals) ->
-		viewFile = locals.filename
-		viewDir = path.join __dirname, "/../views/"
+   res.locals.viewClass = (locals) ->
+      viewFile = locals.filename
+      viewDir = path.join __dirname, "/../views/"
 
-		viewFile.replace(viewDir, "")
-				  .replace(".jade", "")
-				  .replace(/\//g, "-")
+      viewFile.replace(viewDir, "")
+              .replace(".jade", "")
+              .replace(/\//g, "-")
 
-	next()
+   next()
 
 # Services
-
+app.use require "../services/event"
 
 # Controllers
 app.use require "./dashboard"
