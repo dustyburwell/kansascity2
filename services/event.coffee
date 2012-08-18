@@ -1,7 +1,10 @@
 express = require "express"
 app = module.exports = express()
 _ = require("underscore")
-db = require("mongojs").connect('stuff', ['events']);
+
+conn = process.env.MONGOLAB_URI
+
+db = require("mongojs").connect(conn, ['events']);
 
 
 phases = ["First", "Second", "Third", "Fourth", "Last"]
