@@ -2,6 +2,7 @@ path = require "path"
 express = require "express"
 port = process.env.PORT || 3000
 app = express()
+flash = require 'connect-flash';
 
 # Settings
 app.set "view engine", "jade"
@@ -16,6 +17,10 @@ app.configure "production", () ->
 
 # Middleware
 app.use express.bodyParser()
+
+app.use express.cookieParser('keyboard cat')
+app.use express.session({ cookie: { maxAge: 60000 }})
+app.use flash()
 
 app.use require("connect-assets")()
 app.use express.static __dirname + "/../public"

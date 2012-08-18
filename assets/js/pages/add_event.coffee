@@ -1,6 +1,7 @@
 class AddEventPage
 
    initialize: () ->
+      $("input[rel=tipsy]").tipsy({fade: true, gravity: 'w'})
       phase = $("form select[name='event[phase]']")
       day = $("form select[name='event[day]']")
       $("form select[name='event[frequency]']").change () ->

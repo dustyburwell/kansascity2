@@ -7,27 +7,27 @@ block body
 		h3 Your Information
 
 		label Your name
-			input(name='owner[name]')
+			input(name='owner[name]', class=error['owner[name]'] && 'error', rel='tipsy', title='For records only, will not be displayed', value=data.owner && data.owner.name)
 		label Your email
-			input(name='owner[email]')
+			input(name='owner[email]', class=error['owner[email]'] && 'error', rel='tipsy', title='For records only, will not be displayed', value=data.owner && data.owner.email)
 
 		h3 Your Event
 
 		label The event title
-			input(name='event[title]')
+			input(name='event[title]', class=error['event[title]'] && 'error', value=data.event && data.event.title)
 		label When is the event?
-			select(name='event[frequency]')
+			select(name='event[frequency]', class=error['event[frequency]'] && 'error')
 				option Monthly
 				option Bi-Monthly
 				option Weekly
 				option Irregular
-			select(name='event[phase]')
+			select(name='event[phase]', class=error['event[phase]'] && 'error')
 				option First
 				option Second
 				option Third
 				option Fourth
 				option Last
-			select(name='event[day]')
+			select(name='event[day]', class=error['event[day]'] && 'error')
 				option Sunday
 				option Monday
 				option Tuesday
@@ -36,8 +36,8 @@ block body
 				option Friday
 				option Saturday
 		label Who is the event for?
-			input(name='event[people]')
+			input(name='event[people]', class=error['event[people]'] && 'error', rel='tipsy', title='Like Rubyists, Pythonistas, or Nodesters', value=data.event && data.event.people)
 		label The event's website
-			input(name='event[url]')
+			input(name='event[url]', class=error['event[url]'] && 'error', value=data.event && data.event.url)
 
 		input(type='submit') Add Event

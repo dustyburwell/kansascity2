@@ -11,9 +11,13 @@ html
          != css("reset")
          != css("core")
          != css("event")
+         != css("tipsy")
          
       block scripts
          script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+         != js("jquery.tipsy")
+         != js("jquery.unspamify")
+         != js("pages/layout")
          != js("pages/add_event")
 
    body(class=viewClass(locals))
@@ -27,3 +31,8 @@ html
                      a(href="/add_event/") Add your event
 
       block body
+
+      footer
+         | for comments or if you see an error, contact 
+         a.unspamify-me ascalonx at gmail dot com
+         |  or @dustyburwell

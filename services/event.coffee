@@ -38,26 +38,17 @@ class Event
    add: (owner_name, owner_email, event_title, event_url, event_frequency, event_phase, event_day, event_people, callback) ->
       event_frequency = event_frequency.toLowerCase()
       
-      [time, error] = switch event_frequency
+      time = switch event_frequency
          when "monthly", "bi-monthly"
-            if event_day not in days 
-               ['', 'Must specify event day']
-            else if event_phase not in phases 
-               ['', 'Must specify event phase']
-            else ["#{event_phase} #{event_day}", '']
+            "#{event_phase} #{event_day}"
          when 'weekly'
-            if event_day not in days 
-               ['', 'Must specify event day']
-            else ["Every #{event_day}", '']
+            "Every #{event_day}"
          when 'irregular'
-            ['Varies', '']
-         else
-            ['', 'Must specify event frequency']
-
-      if error
-         callback(error)
+            'Varies'
 
       db.events.save {
+         owner_name: owner_name
+         owner_email: owner_email
          title: event_title
          people: event_people
          url: event_url
@@ -69,7 +60,6 @@ class Event
 event = new Event()
 
 app.use (req, res, next) ->
-   console.log "hello"
    req.services or= {}
    req.services.event = event
    next()
