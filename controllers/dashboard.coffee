@@ -44,7 +44,7 @@ app.post "/add_event", (req, res) ->
          if post.event.day not in days
             error['event[day]'] = "Must specify an event day"
       when "weekly"
-         if poast.event.day not in days
+         if post.event.day not in days
             error['event[day]'] = "Must specify an event day"
 
    if not isEmpty(error)
