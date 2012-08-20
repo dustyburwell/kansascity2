@@ -10,7 +10,7 @@ body {
 	font: 100%/1.5em "Helvetica Neue",Arial,Helvetica,sans-serif;
 	margin: 0 auto;
 	padding: 0 16px;
-	width: 752px;
+	width: 960px;
 }
 
 a,
@@ -133,7 +133,7 @@ form h5 {
 	height: 4.5em;
 	margin: 0 0 1em 16px;
 	padding: 0.5em;
-	width: 208px;
+	width: 275px;
 }
 .events li:nth-child(3n-2) {
 	clear: left;
