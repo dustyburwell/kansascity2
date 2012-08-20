@@ -55,15 +55,15 @@ body > article > section {
 body > article > section > header {
 	clear: both;
 	text-align: right;
-	transform-origin: 23.5em 25em;
+	transform-origin: 30.5em 32em;
 	transform: rotate(-90deg);
-	-ms-transform-origin: 23.5em 25em;
+	-ms-transform-origin: 30.5em 32em;
 	-ms-transform: rotate(-90deg);
-	-moz-transform-origin: 23.5em 25em;
+	-moz-transform-origin: 30.5em 32em;
 	-moz-transform: rotate(-90deg);
-	-o-transform-origin: 23.5em 25em;
+	-o-transform-origin: 30.5em 32em;
 	-o-transform: rotate(-90deg);
-	-webkit-transform-origin: 23.5em 25em;
+	-webkit-transform-origin: 30.5em 32em;
 	-webkit-transform: rotate(-90deg);
 }
 body > article > section > header h2 {
