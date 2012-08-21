@@ -23,7 +23,9 @@ app.use express.session({ cookie: { maxAge: 60000 }})
 app.use flash()
 
 app.use require("connect-assets")()
-app.use express.static __dirname + "/../public"
+
+app.use express.favicon __dirname + '/../public/favicon.ico', { maxAge: 2592000000 };
+
 app.use (req, res, next) ->
    res.locals.viewClass = (locals) ->
       viewFile = locals.filename
