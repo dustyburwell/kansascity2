@@ -1,0 +1,73 @@
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+body {
+	background: #fff;
+	color: #222;
+	font: 100%/1.5em "Helvetica Neue",Arial,Helvetica,sans-serif;
+	width: 100%;
+	padding: 0;
+}
+
+h1 {
+	font-size: 1.75em;
+	text-align: center;
+}
+
+article,
+footer,
+header,
+nav {
+	display: block;
+}
+
+body > header {
+	padding: 1.5em 0 0;
+}
+body > article > section {
+	width: 100%;
+}
+
+body > article > section > header h2 {
+	background: #fff;
+	border: 0 solid #ddd;
+	border-width: 1px 0 0;
+	padding: 15px 15px 7px;
+	font-size: 1.25em;
+}
+body > footer {
+	background: #eee;
+	border-top: 1px solid #ddd;
+	clear: both;
+	color: #ccc;
+	padding: 1.5em 17px 3em;
+}
+body > footer a {
+	color: #ccc;
+}
+
+.add_event a {
+	background: #ff9;
+	display: block;
+	padding: 0.75em;
+	margin-top: 15px;
+}
+
+.events {
+	float: left;
+	padding: 0;
+	width: 100%;
+}
+.events li {
+	width: 100%;
+}
+.events li div {
+	border: 0.5em solid #eee;
+	margin: 15px;
+	padding: 15px;	
+}
+
+.events_last {
+  margin-bottom: 1em;
+}
+
+}

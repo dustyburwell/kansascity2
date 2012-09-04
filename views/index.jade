@@ -12,8 +12,9 @@ block body
 					h2= key
 				ol.events
 					each event in val
-						li.vcard(style="border-color:#{event.color}")
-							h3
-								a(href=event.url)= event.title
-								p.who= event.people
-								p.when= event.when
+						li.vcard
+							div(style="border-color:#{event.color}")
+								h3
+									a(href=event.url)= event.title
+									p.who= event.people
+									p.when= event.when

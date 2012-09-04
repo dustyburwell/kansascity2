@@ -1,5 +1,6 @@
 @charset 'utf-8';
 
+@media screen and (min-device-width: 480px) {
 html {
 	background: #eee;
 }
@@ -128,12 +129,15 @@ form h5 {
 	width: 100%;
 }
 .events li {
-	border: 0.5em solid #eee;
 	float: left;
+	width: 310px;
+}
+.events li div
+{
+	border: 0.5em solid #eee;
 	height: 6em;
 	margin: 0 0 1em 16px;
 	padding: 0.5em;
-	width: 275px;
 }
 .events li:nth-child(3n-2) {
 	clear: left;
@@ -145,5 +149,6 @@ form h5 {
 }
 
 .events li {
-	border-color: #a2b935;
+	
+}
 }

@@ -1,6 +1,9 @@
 doctype 5
 html
    head
+      meta(name="HandheldFriendly", content="true")
+      meta(name="viewport", content="width=device-width, height=device-height, user-scalable=no")
+
       title kansascity2: what's on
          block title
             |?
@@ -8,6 +11,7 @@ html
       block styles
          != css("reset")
          != css("core")
+         != css("phone")
          != css("event")
          != css("tipsy")
          
