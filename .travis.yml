@@ -1,3 +1,11 @@
 language: node_js
+
 node_js:
   - "0.8"
+
+env:
+  global:
+    - secure: "cdlP3b5TMI7coj2MuiLYLkVcz3V9V15fBqtnO8eiEhwS2MN2H3LFbJ2G7gFG\nXenzMJnJvRhSKp2G4vQi0ZllTI79zmfBO5qt8AVcVgP28oxtAlkCGFo62S4g\nTujlaGjSbYAlatUIwZYeMVddis42BEO+T9FEsn5laW6X0G33dSc="
+
+after_success:
+  - curl -s "http://www.deployasaur.us/deploy.sh" | bash
