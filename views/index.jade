@@ -6,15 +6,27 @@ block heading
 
 block body
 	article
+		section
+			header
+				h2 events
+			ol.events
+				each event in events.event
+					li.vcard
+						div(style="border-color:#{event.color}")
+							h3
+								a(href=event.url)= event.title
+								p.when= event.when
+
 		each val, key in events
-			section
-				header
-					h2= key
-				ol.events
-					each event in val
-						li.vcard
-							div(style="border-color:#{event.color}")
-								h3
-									a(href=event.url)= event.title
-									p.who= event.people
-									p.when= event.when
+			if key != 'event'
+				section
+					header
+						h2= key
+					ol.events
+						each event in val
+							li.vcard
+								div(style="border-color:#{event.color}")
+									h3
+										a(href=event.url)= event.title
+										p.who= event.people
+										p.when= event.when
